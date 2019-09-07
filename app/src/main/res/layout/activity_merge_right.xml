@@ -60,4 +60,13 @@
         android:background="@drawable/carimg"
         android:rotation="90" />
 
+    <Button
+        android:id="@+id/arrow"
+        android:layout_width="293dp"
+        android:layout_height="169dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/curvedarrow"
+        android:rotation="90" />
+
 </android.support.design.widget.CoordinatorLayout>

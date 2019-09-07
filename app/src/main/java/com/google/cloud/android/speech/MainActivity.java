@@ -237,7 +237,7 @@ public class MainActivity extends AppCompatActivity implements MessageDialogFrag
                 REQUEST_RECORD_AUDIO_PERMISSION);
     }
 
-    private final SpeechService.Listener mSpeechServiceListener =
+    private final SpeechService.Listener mSpeechServiceListener = //writes down user input below
             new SpeechService.Listener() {
                 @Override
                 public void onSpeechRecognized(final String text, final boolean isFinal) {
@@ -251,15 +251,46 @@ public class MainActivity extends AppCompatActivity implements MessageDialogFrag
                                 if (isFinal) {
                                     mText.setText(null);
                                     mAdapter.addResult(text);
-                                    mRecyclerView.smoothScrollToPosition(0);
+
+                                    //mAdapter.addResult(sentence[1]);
+                                    //mRecyclerView.smoothScrollToPosition(0);
                                 } else {
-                                    mText.setText(text);
+                                    if (text.contains("merge right"))
+                                        mText.setText("works");
+                                        openMergeRight();
+//                                      if (text.contains("merge left")) openMergeLeft();
+//                                    if (text.contains("pass")) openPass();
+
+
+//                                    String[] sentence = text.split(" "); //get user input as array of strings
+//                                    for (String word : sentence) {
+//                                        for (String second : sentence) {
+//                                            if (word.equals("merge") && second.equals("right")) {
+//                                                String test = "Do you want to merge right?";
+//                                                openMergeRight();
+//                                                mText.setText(test);
+//                                            } else if (word.equals("merge") && second.equals("left")) {
+//                                                String test = "Do you want to merge left?";
+//                                                //openMergeLeft();
+//                                                mText.setText(test);
+//                                            } else if (word.equals("pass")){
+//                                                String test = "Do you want to pass?";
+//                                                //openPass();
+//                                                mText.setText(test);
+//                                            }
+//                                        }
+//                                    }
                                 }
                             }
                         });
                     }
                 }
             };
+
+    public void openMergeRight(){
+        Intent intent = new Intent(this, mergeRight.class);
+        startActivity(intent);
+    }
 
     private static class ViewHolder extends RecyclerView.ViewHolder {
 
