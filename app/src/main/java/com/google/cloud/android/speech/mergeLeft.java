@@ -6,12 +6,13 @@ import android.content.Intent;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class mergeRight extends AppCompatActivity {
+public class mergeLeft extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_merge_right);
+        setContentView(R.layout.activity_merge_left);
+
 
         new Timer().schedule(
                 new TimerTask() {
@@ -29,4 +30,3 @@ public class mergeRight extends AppCompatActivity {
         startActivity(intent);
     }
 }
-

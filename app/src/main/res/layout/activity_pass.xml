@@ -62,11 +62,11 @@
 
     <Button
         android:id="@+id/arrow"
-        android:layout_width="208dp"
-        android:layout_height="258dp"
+        android:layout_width="235dp"
+        android:layout_height="181dp"
         android:layout_gravity="center"
         android:layout_marginTop="0dp"
-        android:background="@drawable/curvedarrow"
-        />
+        android:background="@drawable/passarrow"
+         />
 
 </android.support.design.widget.CoordinatorLayout>

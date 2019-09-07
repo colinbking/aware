@@ -254,10 +254,9 @@ public class MainActivity extends AppCompatActivity implements MessageDialogFrag
 
                                     //mAdapter.addResult(sentence[1]);
                                     //mRecyclerView.smoothScrollToPosition(0);
-                                } else {
-                                    if (text.contains("merge right"))
+                                } else if (text.contains("merge right")){
                                         mText.setText("works");
-                                        openMergeRight();
+                                        openMergeRight();}
 //                                      if (text.contains("merge left")) openMergeLeft();
 //                                    if (text.contains("pass")) openPass();
 
@@ -280,6 +279,10 @@ public class MainActivity extends AppCompatActivity implements MessageDialogFrag
 //                                            }
 //                                        }
 //                                    }
+                                 else if (text.contains("merge left")){
+                                    openMergeLeft();
+                                }else if (text.contains("want to pass")){
+                                    openPass();
                                 }
                             }
                         });
@@ -291,6 +294,15 @@ public class MainActivity extends AppCompatActivity implements MessageDialogFrag
         Intent intent = new Intent(this, mergeRight.class);
         startActivity(intent);
     }
+    public void openMergeLeft(){
+        Intent intent = new Intent(this, mergeLeft.class);
+        startActivity(intent);
+    }
+    public void openPass() {
+        Intent intent = new Intent(this, Pass.class);
+        startActivity(intent);
+    }
+
 
     private static class ViewHolder extends RecyclerView.ViewHolder {
 

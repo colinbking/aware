@@ -11,7 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Speech"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".mergeRight"></activity>
+        <activity android:name=".Pass"></activity>
+        <activity android:name=".mergeLeft" />
+        <activity android:name=".mergeRight" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
