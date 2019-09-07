@@ -255,7 +255,7 @@ public class MainActivity extends AppCompatActivity implements MessageDialogFrag
                                     //mAdapter.addResult(sentence[1]);
                                     //mRecyclerView.smoothScrollToPosition(0);
                                 } else if (text.contains("merge right")){
-                                        mText.setText("works");
+                                        mText.setText("right");
                                         openMergeRight();}
 //                                      if (text.contains("merge left")) openMergeLeft();
 //                                    if (text.contains("pass")) openPass();
@@ -280,10 +280,15 @@ public class MainActivity extends AppCompatActivity implements MessageDialogFrag
 //                                        }
 //                                    }
                                  else if (text.contains("merge left")){
+                                    mText.setText("left");
                                     openMergeLeft();
                                 }else if (text.contains("want to pass")){
+                                    mText.setText("pass");
                                     openPass();
+                                }else{
+                                     mText.setText(text);
                                 }
+
                             }
                         });
                     }
