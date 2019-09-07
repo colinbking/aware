@@ -14,6 +14,8 @@ public class Pass extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pass);
 
+        //send a message to other phone to request pass
+
         new Timer().schedule(
                 new TimerTask() {
                     @Override

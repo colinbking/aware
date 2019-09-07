@@ -13,6 +13,8 @@ public class mergeRight extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_merge_right);
 
+        //send a message to other phone to request right lane change
+
         new Timer().schedule(
                 new TimerTask() {
                     @Override

@@ -15,7 +15,10 @@
  */
 
 package com.google.cloud.android.speech;
+//package speech.to.text.texttospeech;
 
+
+import android.speech.tts.TextToSpeech;
 import android.Manifest;
 import android.content.ComponentName;
 import android.content.Intent;
@@ -254,7 +257,7 @@ public class MainActivity extends AppCompatActivity implements MessageDialogFrag
 
                                     //mAdapter.addResult(sentence[1]);
                                     //mRecyclerView.smoothScrollToPosition(0);
-                                } else if (text.contains("merge right")){
+                                } else if (text.contains("merge right") || (text.contains("cut in") && text.contains("right"))){
                                         mText.setText("right");
                                         openMergeRight();}
 //                                      if (text.contains("merge left")) openMergeLeft();
@@ -279,12 +282,15 @@ public class MainActivity extends AppCompatActivity implements MessageDialogFrag
 //                                            }
 //                                        }
 //                                    }
-                                 else if (text.contains("merge left")){
+                                 else if (text.contains("merge left") || (text.contains("cut in") && text.contains("left"))){
                                     mText.setText("left");
                                     openMergeLeft();
-                                }else if (text.contains("want to pass")){
+                                }else if (text.contains("want to pass") || text.contains("can I pass")){
                                     mText.setText("pass");
                                     openPass();
+                                }else if (text.contains("thank you") || text.contains("Thank you")){
+                                    mText.setText("you said thank you");
+                                    openThankYou();
                                 }else{
                                      mText.setText(text);
                                 }
@@ -305,6 +311,10 @@ public class MainActivity extends AppCompatActivity implements MessageDialogFrag
     }
     public void openPass() {
         Intent intent = new Intent(this, Pass.class);
+        startActivity(intent);
+    }
+    public void openThankYou() {
+        Intent intent = new Intent(this, thankYou.class);
         startActivity(intent);
     }
 
@@ -354,6 +364,12 @@ public class MainActivity extends AppCompatActivity implements MessageDialogFrag
             return mResults;
         }
 
+    }
+    public class recieved {
+        Boolean taken = false;
+        Boolean left = false;
+        Boolean right = false;
+        Boolean pass = false;
     }
 
 }
