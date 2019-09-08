@@ -55,6 +55,7 @@
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="838dp"
-        app:srcCompat="@drawable/usemergeright" />
+        app:srcCompat="@drawable/mergeright"
+        android:scaleType="fitXY" />
 
 </android.support.design.widget.CoordinatorLayout>

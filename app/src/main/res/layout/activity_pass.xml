@@ -51,4 +51,11 @@
         app:behavior_overlapTop="128dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="837dp"
+        app:srcCompat="@drawable/pass"
+        android:scaleType="fitXY" />
+
 </android.support.design.widget.CoordinatorLayout>
