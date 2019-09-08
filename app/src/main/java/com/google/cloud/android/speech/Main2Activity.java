@@ -22,14 +22,9 @@ public class Main2Activity extends AppCompatActivity {
                 mp.start();
                 Intent activity2Intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(activity2Intent);
+                overridePendingTransition(0, 0);
             }
         });
-//        button.performClick();
-    }
-
-    public void openMainActivity() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
     }
 
 }

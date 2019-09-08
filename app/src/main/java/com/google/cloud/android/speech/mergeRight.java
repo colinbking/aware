@@ -22,13 +22,14 @@ public class mergeRight extends AppCompatActivity {
                         returnActivity();
                     }
                 },
-                5000
+                3000
         );
     }
 
     private void returnActivity(){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        overridePendingTransition(0, 0);
     }
 }
 

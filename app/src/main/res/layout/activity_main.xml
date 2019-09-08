@@ -22,12 +22,20 @@
     android:layout_height="match_parent"
     tools:context="com.google.cloud.android.speech.MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/homescreenlowres" />
+
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:visibility="visible">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -35,9 +43,9 @@
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
             android:paddingLeft="32dp"
-            android:paddingRight="32dp"/>
+            android:paddingRight="32dp" />
 
-        <include layout="@layout/item_result"/>
+        <include layout="@layout/item_result" />
 
     </android.support.design.widget.AppBarLayout>
 
@@ -46,9 +54,12 @@
         android:layout_width="400dp"
         android:layout_height="match_parent"
         android:clipToPadding="false"
-        android:paddingBottom="@dimen/spacing_small"
         android:paddingTop="@dimen/spacing_small"
+        android:paddingBottom="@dimen/spacing_small"
+        android:visibility="gone"
         app:behavior_overlapTop="128dp"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+    </android.support.v7.widget.RecyclerView>
 
 </android.support.design.widget.CoordinatorLayout>

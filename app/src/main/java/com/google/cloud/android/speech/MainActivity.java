@@ -193,16 +193,16 @@ public class MainActivity extends AppCompatActivity implements MessageDialogFrag
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_file:
-                mSpeechService.recognizeInputStream(getResources().openRawResource(R.raw.audio));
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId()) {
+//            case R.id.action_file:
+//                mSpeechService.recognizeInputStream(getResources().openRawResource(R.raw.audio));
+//                return true;
+//            default:
+//                return super.onOptionsItemSelected(item);
+//        }
+//    }
 
     private void startVoiceRecorder() {
         if (mVoiceRecorder != null) {
