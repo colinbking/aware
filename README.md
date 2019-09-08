@@ -9,3 +9,5 @@ The reason we chose to do this as an app rather than integrated in a car is beca
 
 ## How to run
 Use Android studio to run the project
+
+![Aware Logo](https://github.com/colinbking/aware/blob/master/app/src/main/res/mipmap-hdpi/car_icon.png)
