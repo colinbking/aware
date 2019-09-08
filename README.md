@@ -1,5 +1,5 @@
 # What is Aware? 
-Aware is an intercar communication system. Drivers will use the Android app to send and respond to requests to change lanes, pass slow cars, and so on. 
+Aware is an inter-car communication system designed to promote driver awareness and reduce traffic accidents. Drivers will use the Android app to send and respond to requests to change lanes, pass slow cars, and so on. 
 
 ## Motivation
 Did you know that traffic accidents are the leading cause of mortality in America? According to the US Department of Transportation, there are over 6 million automotive crashes each year. 60% of these 6 million could have been prevented had the driver been alerted a mere half second before the collision. Last summer, our teammate Colin drove 5 hours a day on what is known as "America's deadliest highway." He wished he was able to notify other cars when he wanted to pass them or merge into another lane.
