@@ -257,7 +257,7 @@ public class MainActivity extends AppCompatActivity implements MessageDialogFrag
 
                                     //mAdapter.addResult(sentence[1]);
                                     //mRecyclerView.smoothScrollToPosition(0);
-                                } else if (text.contains("merge right") || (text.contains("cut in") && text.contains("right"))){
+                                } else if (text.contains("merge right") || text.contains("marriage right") || (text.contains("cut in") && text.contains("right"))){
                                         mText.setText("right");
                                         openMergeRight();}
 //                                      if (text.contains("merge left")) openMergeLeft();
