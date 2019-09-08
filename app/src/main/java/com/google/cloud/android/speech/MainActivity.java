@@ -257,7 +257,7 @@ public class MainActivity extends AppCompatActivity implements MessageDialogFrag
 
                                     //mAdapter.addResult(sentence[1]);
                                     //mRecyclerView.smoothScrollToPosition(0);
-                                } else if (text.contains("merge right") || text.contains("marriage right") || (text.contains("cut in") && text.contains("right"))){
+                                } else if (text.contains("merge right") || text.contains("marriage right") || (text.contains("cut in") && text.contains("right")) || text.contains("cut in on the right")){
                                         mText.setText("right");
                                         openMergeRight();}
 //                                      if (text.contains("merge left")) openMergeLeft();
@@ -282,10 +282,10 @@ public class MainActivity extends AppCompatActivity implements MessageDialogFrag
 //                                            }
 //                                        }
 //                                    }
-                                 else if (text.contains("merge left") || text.contains("marriage left") || (text.contains("cut in") && text.contains("left"))){
+                                 else if (text.contains("merge left") || text.contains("marriage left") || (text.contains("cut in") && text.contains("left")) || (text.contains("cut in on the left"))){
                                     mText.setText("left");
                                     openMergeLeft();
-                                }else if (text.contains("want to pass") || text.contains("can I pass")){
+                                }else if (text.contains("want to pass") || text.contains("can I pass") || text.contains("passed")){
                                     mText.setText("pass");
                                     openPass();
                                 }else if (text.contains("thank you") || text.contains("Thank you")){
