@@ -282,7 +282,7 @@ public class MainActivity extends AppCompatActivity implements MessageDialogFrag
 //                                            }
 //                                        }
 //                                    }
-                                 else if (text.contains("merge left") || (text.contains("cut in") && text.contains("left"))){
+                                 else if (text.contains("merge left") || text.contains("marriage left") || (text.contains("cut in") && text.contains("left"))){
                                     mText.setText("left");
                                     openMergeLeft();
                                 }else if (text.contains("want to pass") || text.contains("can I pass")){
@@ -304,14 +304,17 @@ public class MainActivity extends AppCompatActivity implements MessageDialogFrag
     public void openMergeRight(){
         Intent intent = new Intent(this, mergeRight.class);
         startActivity(intent);
+        overridePendingTransition(0, 0);
     }
     public void openMergeLeft(){
         Intent intent = new Intent(this, mergeLeft.class);
         startActivity(intent);
+        overridePendingTransition(0, 0);
     }
     public void openPass() {
         Intent intent = new Intent(this, Pass.class);
         startActivity(intent);
+        overridePendingTransition(0, 0);
     }
     public void openThankYou() {
         Intent intent = new Intent(this, thankYou.class);
