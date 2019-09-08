@@ -9,25 +9,22 @@ import android.widget.EditText;
 import org.w3c.dom.Text;
 
 import java.util.Locale;
-public class texttospeech extends AppCompatActivity implements TextToSpeech.OnInitListener {
+public class texttospeech extends AppCompatActivity implements TextToSpeech.OnInitListener{
 
-    TextToSpeech textToSpeech;
-    String speakTest;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_texttospeech);
+        //setContentView(R.layout.activity_texttospeech);
     }
 
+
     public void onInit(int status) {
+        TextToSpeech textToSpeech = new TextToSpeech(this, this);
+        String text ="hello";
         if (status == TextToSpeech.SUCCESS) {
             int result = textToSpeech.setLanguage(Locale.US);
-            String text = speakText.getText().toString();
-            textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null, null)
-        }
-        MainActivity respond = new MainActivity();
-        if (respond.recieved() == "True"){
-
+            text = "hello";
+            textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null, null);
         }
 
     }

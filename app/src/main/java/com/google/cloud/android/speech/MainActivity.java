@@ -290,7 +290,7 @@ public class MainActivity extends AppCompatActivity implements MessageDialogFrag
                                     openPass();
                                 }else if (text.contains("thank you") || text.contains("Thank you")){
                                     mText.setText("you said thank you");
-                                    openThankYou();
+                                    //openSpeak();
                                 }else{
                                      mText.setText(text);
                                 }
@@ -315,6 +315,10 @@ public class MainActivity extends AppCompatActivity implements MessageDialogFrag
     }
     public void openThankYou() {
         Intent intent = new Intent(this, thankYou.class);
+        startActivity(intent);
+    }
+    public void openSpeak() {
+        Intent intent = new Intent(this, texttospeech.class);
         startActivity(intent);
     }
 

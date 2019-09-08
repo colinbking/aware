@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Speech"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".thankYou"></activity>
+        <activity android:name=".Main2Activity"></activity>
+        <activity android:name=".thankYou" />
         <activity android:name=".texttospeech" />
         <activity android:name=".Pass" />
         <activity android:name=".mergeLeft" />
@@ -26,8 +27,8 @@
 
         <service android:name=".SpeechService" />
     </application>
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
 </manifest>
